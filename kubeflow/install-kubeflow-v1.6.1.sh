@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 0. Prepare
+sudo rm -rf /mnt
+sudo mkdir -p /mnt/minio
+
 # 1. Install Istio
 ./kustomize build common/istio-1-14/istio-crds/base | kubectl apply -f -
 ./kustomize build common/istio-1-14/istio-namespace/base | kubectl apply -f -
