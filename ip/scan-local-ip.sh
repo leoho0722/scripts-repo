@@ -1,6 +1,6 @@
 #!/bin/bash
 # Ping 區域網路中所有的 IP 位址
-for ip in 10.20.1.{1..254}; do
+for ip in 10.20.{0..1}.{1..254}; do
   # 刪除舊的 arp 記錄
   sudo arp -d $ip > /dev/null 2>&1
   # 藉由 ping 取得新的 arp 資訊
